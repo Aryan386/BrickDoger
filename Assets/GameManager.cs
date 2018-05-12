@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
     public float slowDown = 10f;
     
     
+    
     // Use this for gameover, gamewins, scores, restart and gameplay tweak.
 
     public void EndGame()
@@ -31,4 +32,6 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
+
+    
 }

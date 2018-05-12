@@ -3,6 +3,7 @@
 public class PlayerCollision : MonoBehaviour {
 
     public PlayerMovment movment;
+    
 
     void OnCollisionEnter(Collision collisioninfo)
     {
@@ -12,6 +13,8 @@ public class PlayerCollision : MonoBehaviour {
 
             FindObjectOfType<GameManager>().EndGame();
         }
+
+       
     }   
 
 }

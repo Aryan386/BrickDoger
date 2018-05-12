@@ -4,6 +4,7 @@ public class PlayerMovment : MonoBehaviour {
 
     public float sideSpeed = 500f;
     private Rigidbody PlayerRb;
+    public float Score;
 
     public float floorWidth = 7f;
 

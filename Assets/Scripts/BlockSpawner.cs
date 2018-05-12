@@ -5,6 +5,7 @@ public class BlockSpawner : MonoBehaviour {
     public Transform[] spawnPoints;
 
     public GameObject blockPrefab;
+    public GameObject starPrefab;
 
     public float spawnTime = 3f;
 
@@ -33,6 +34,11 @@ public class BlockSpawner : MonoBehaviour {
             if (randomIndex != i)
             {
                 Instantiate(blockPrefab, spawnPoints[i].position, Quaternion.identity);
+            }
+
+            else
+            {
+                Instantiate(starPrefab, spawnPoints[i].position, Quaternion.identity);
             }
         }
 
