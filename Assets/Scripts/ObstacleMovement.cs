@@ -5,18 +5,24 @@ public class ObstacleMovement : MonoBehaviour {
 
     public Rigidbody obstacleRb;
 
-    public float obstacleSpeed = 1000f;
+    public const float obstacleSpeed = 1000f;
+	public float blockSpeed;
+    public float speedRun;
     
 	// Use this for initialization
 	void Start () {
 
+       speedRun += Time.timeSinceLevelLoad / 20f;
        
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 
-        obstacleRb.AddForce(0 , 0 , -obstacleSpeed * Time.deltaTime);
+		blockSpeed = obstacleSpeed + speedRun;
+		obstacleRb.AddForce(0, 0, -blockSpeed * Time.deltaTime);
+        // obstacleRb.AddForce(0 , 0 , -obstacleSpeed +speedRun * Time.deltaTime);
+       // Debug.Log(obstacleSpeed);
 
         
 	}
