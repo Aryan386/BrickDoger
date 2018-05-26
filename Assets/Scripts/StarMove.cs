@@ -6,7 +6,7 @@ public class StarMove : MonoBehaviour
 
     public Rigidbody StarRb;
 
-    public const float starSpeed = 850f;
+    public const float starSpeed = 3000f;
     public float chnageSpeed;
     public float finalSpeed;
 
@@ -20,9 +20,10 @@ public class StarMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        finalSpeed = starSpeed + chnageSpeed;
+        finalSpeed = starSpeed + chnageSpeed + ScoreText.playerScore;
 
         StarRb.AddForce(0, 0, -finalSpeed * Time.deltaTime);
+        
 
 
     }

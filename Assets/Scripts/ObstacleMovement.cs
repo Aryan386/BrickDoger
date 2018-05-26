@@ -5,7 +5,7 @@ public class ObstacleMovement : MonoBehaviour {
 
     public Rigidbody obstacleRb;
 
-    public const float obstacleSpeed = 1000f;
+    public const float obstacleSpeed = 3000f;
 	public float blockSpeed;
     public float speedRun;
     
@@ -19,10 +19,10 @@ public class ObstacleMovement : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 
-		blockSpeed = obstacleSpeed + speedRun;
+		blockSpeed = obstacleSpeed + speedRun + ScoreText.playerScore;
 		obstacleRb.AddForce(0, 0, -blockSpeed * Time.deltaTime);
         // obstacleRb.AddForce(0 , 0 , -obstacleSpeed +speedRun * Time.deltaTime);
-       // Debug.Log(obstacleSpeed);
+       Debug.Log(blockSpeed);
 
         
 	}

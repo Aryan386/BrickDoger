@@ -9,7 +9,7 @@ public class BlockSpawner : MonoBehaviour {
     public GameObject blockPrefab;
     public GameObject starPrefab;
 
-    public float spawnTime = 3f;
+    public float spawnTime = 2f;
 
     public float spawnTimeInterval = 2f;
 
@@ -20,6 +20,7 @@ public class BlockSpawner : MonoBehaviour {
         {
             SpawnBlocks();
             spawnTime = Time.time + spawnTimeInterval;
+            Debug.Log(spawnTime);
 
         }
 
